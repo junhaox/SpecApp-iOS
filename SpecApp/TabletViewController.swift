@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  SpecApp
 //
 //  Created by Junhao Xie on 11/8/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class TabletViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

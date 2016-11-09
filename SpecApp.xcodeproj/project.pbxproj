@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		A1BA62221DD301F5008B09A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BA62211DD301F5008B09A2 /* AppDelegate.swift */; };
-		A1BA62241DD301F5008B09A2 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BA62231DD301F5008B09A2 /* FirstViewController.swift */; };
-		A1BA62261DD301F5008B09A2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BA62251DD301F5008B09A2 /* SecondViewController.swift */; };
+		A1BA62241DD301F5008B09A2 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BA62231DD301F5008B09A2 /* PhoneViewController.swift */; };
+		A1BA62261DD301F5008B09A2 /* TabletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BA62251DD301F5008B09A2 /* TabletViewController.swift */; };
 		A1BA62291DD301F5008B09A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BA62271DD301F5008B09A2 /* Main.storyboard */; };
 		A1BA622B1DD301F5008B09A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1BA622A1DD301F5008B09A2 /* Assets.xcassets */; };
 		A1BA622E1DD301F5008B09A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BA622C1DD301F5008B09A2 /* LaunchScreen.storyboard */; };
 		A1BA62391DD301F5008B09A2 /* SpecAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BA62381DD301F5008B09A2 /* SpecAppTests.swift */; };
 		A1BA62441DD301F5008B09A2 /* SpecAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BA62431DD301F5008B09A2 /* SpecAppUITests.swift */; };
+		A1BA62521DD303E4008B09A2 /* LaptopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BA62511DD303E4008B09A2 /* LaptopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +38,8 @@
 /* Begin PBXFileReference section */
 		A1BA621E1DD301F5008B09A2 /* SpecApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpecApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BA62211DD301F5008B09A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A1BA62231DD301F5008B09A2 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		A1BA62251DD301F5008B09A2 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		A1BA62231DD301F5008B09A2 /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
+		A1BA62251DD301F5008B09A2 /* TabletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabletViewController.swift; sourceTree = "<group>"; };
 		A1BA62281DD301F5008B09A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1BA622A1DD301F5008B09A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1BA622D1DD301F5008B09A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		A1BA623F1DD301F5008B09A2 /* SpecAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpecAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BA62431DD301F5008B09A2 /* SpecAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecAppUITests.swift; sourceTree = "<group>"; };
 		A1BA62451DD301F5008B09A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1BA62511DD303E4008B09A2 /* LaptopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaptopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				A1BA62211DD301F5008B09A2 /* AppDelegate.swift */,
-				A1BA62231DD301F5008B09A2 /* FirstViewController.swift */,
-				A1BA62251DD301F5008B09A2 /* SecondViewController.swift */,
+				A1BA62231DD301F5008B09A2 /* PhoneViewController.swift */,
+				A1BA62251DD301F5008B09A2 /* TabletViewController.swift */,
 				A1BA62271DD301F5008B09A2 /* Main.storyboard */,
 				A1BA622A1DD301F5008B09A2 /* Assets.xcassets */,
 				A1BA622C1DD301F5008B09A2 /* LaunchScreen.storyboard */,
 				A1BA622F1DD301F5008B09A2 /* Info.plist */,
+				A1BA62511DD303E4008B09A2 /* LaptopViewController.swift */,
 			);
 			path = SpecApp;
 			sourceTree = "<group>";
@@ -265,9 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1BA62261DD301F5008B09A2 /* SecondViewController.swift in Sources */,
+				A1BA62521DD303E4008B09A2 /* LaptopViewController.swift in Sources */,
+				A1BA62261DD301F5008B09A2 /* TabletViewController.swift in Sources */,
 				A1BA62221DD301F5008B09A2 /* AppDelegate.swift in Sources */,
-				A1BA62241DD301F5008B09A2 /* FirstViewController.swift in Sources */,
+				A1BA62241DD301F5008B09A2 /* PhoneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FirstViewController.swift
 //  SpecApp
 //
 //  Created by Junhao Xie on 11/8/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class PhoneViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
