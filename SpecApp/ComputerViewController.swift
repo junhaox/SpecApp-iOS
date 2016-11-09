@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LaptopViewController: UIViewController {
+class ComputerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
