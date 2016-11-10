@@ -34,11 +34,20 @@ class ElectronicsViewController: UIViewController, UIPickerViewDataSource, UIPic
         // Dispose of any resources that can be recreated.
     }
 
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        brand.resignFirstResponder()
+        model.resignFirstResponder()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     // returns the number of 'columns' to display.
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
     
     // returns the # of rows in each component..
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
