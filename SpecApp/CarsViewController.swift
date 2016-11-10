@@ -8,18 +8,65 @@
 
 import UIKit
 
-class CarsViewController: UIViewController {
-
+class CarsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    @IBOutlet weak var brand: UITextField!
+    @IBOutlet weak var model: UITextField!
+    
+    var brandData = ["BMW", "Mercedes-Benz", "Audi", "Ferrari", "McLaren", "Porsche", "Lamborghini"]
+    var modelData = ["i8", "AMG GT-S", "R8", "LaFerrari", "P1", "918 Spyder", "Aventador"]
+    var brandPicker = UIPickerView()
+    var modelPicker = UIPickerView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        brandPicker.delegate = self
+        brandPicker.dataSource = self
+        modelPicker.delegate = self
+        modelPicker.dataSource = self
+        brand.inputView = brandPicker
+        model.inputView = modelPicker
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    // returns the number of 'columns' to display.
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    
+    // returns the # of rows in each component..
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if (pickerView == brandPicker) {
+            return brandData.count
+        }
+        else {
+            return modelData.count
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if (pickerView == brandPicker) {
+            return brandData[row]
+        }
+        else {
+            return modelData[row]
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if (pickerView == brandPicker) {
+            brand.text = brandData[row]
+        }
+        else {
+            model.text = modelData[row]
+        }
+    }
 
 }
 

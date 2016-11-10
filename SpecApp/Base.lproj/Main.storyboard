@@ -169,6 +169,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cars" image="cars_icon" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="brand" destination="YAg-qC-iPd" id="LYW-V9-g41"/>
+                        <outlet property="model" destination="dXe-lG-CVf" id="bxW-0j-dBs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
