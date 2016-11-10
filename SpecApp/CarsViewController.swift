@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabletViewController: UIViewController {
+class CarsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

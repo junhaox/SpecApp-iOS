@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Phone-->
+        <!--Electronics-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="PhoneViewController" customModule="SpecApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="ElectronicsViewController" customModule="SpecApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone_img" translatesAutoresizingMaskIntoConstraints="NO" id="2Xf-S9-n9h">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="electronics_img" translatesAutoresizingMaskIntoConstraints="NO" id="2Xf-S9-n9h">
                                 <rect key="frame" x="67" y="28" width="240" height="128"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXo-Hz-KO1">
@@ -84,7 +84,7 @@
                             <constraint firstItem="rQZ-Ih-owf" firstAttribute="top" secondItem="aXo-Hz-KO1" secondAttribute="bottom" constant="63" id="zl9-4B-A7V"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Phone" image="phone_icon" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Electronics" image="electronics_icon" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="brand" destination="5Y1-CG-y1W" id="92i-FZ-wcu"/>
                         <outlet property="model" destination="0ie-gK-VfK" id="RCj-ui-us6"/>
@@ -94,90 +94,10 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
-        <!--Laptop-->
-        <scene sceneID="9uU-BE-gaX">
-            <objects>
-                <viewController id="tjs-Ce-Q2j" customClass="ComputerViewController" customModule="SpecApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PVd-U7-HZM"/>
-                        <viewControllerLayoutGuide type="bottom" id="EMC-2P-Wtd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cWh-i0-KzY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="computer_img" translatesAutoresizingMaskIntoConstraints="NO" id="YT0-UL-akq">
-                                <rect key="frame" x="67" y="28" width="240" height="128"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJt-4V-Gdf">
-                                <rect key="frame" x="67" y="275" width="80" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="dVm-13-PED"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVp-Hi-v5a">
-                                <rect key="frame" x="67" y="375" width="80" height="37"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zis-22-0av">
-                                <rect key="frame" x="163" y="278" width="144" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZ6-hm-2i6">
-                                <rect key="frame" x="163" y="378" width="144" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fq9-OU-5rK">
-                                <rect key="frame" x="146" y="494" width="82" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="82" id="nP9-dl-o2k"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Submit"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.91274450992424938" green="0.95021018401015223" blue="0.90612718685116833" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="YT0-UL-akq" firstAttribute="top" secondItem="PVd-U7-HZM" secondAttribute="bottom" constant="8" symbolic="YES" id="2wn-mE-AWs"/>
-                            <constraint firstItem="Zis-22-0av" firstAttribute="leading" secondItem="VJt-4V-Gdf" secondAttribute="trailing" constant="16" id="33k-sN-PLb"/>
-                            <constraint firstItem="YT0-UL-akq" firstAttribute="leading" secondItem="cWh-i0-KzY" secondAttribute="leadingMargin" constant="51" id="Fkg-6h-inv"/>
-                            <constraint firstItem="EMC-2P-Wtd" firstAttribute="top" secondItem="YT0-UL-akq" secondAttribute="bottom" constant="462" id="HaM-16-Ka9"/>
-                            <constraint firstItem="VJt-4V-Gdf" firstAttribute="leading" secondItem="YT0-UL-akq" secondAttribute="leading" id="Ix8-UO-Daj"/>
-                            <constraint firstItem="Zis-22-0av" firstAttribute="trailing" secondItem="YT0-UL-akq" secondAttribute="trailing" id="JD2-W9-sYm"/>
-                            <constraint firstItem="EMC-2P-Wtd" firstAttribute="top" secondItem="fq9-OU-5rK" secondAttribute="bottom" constant="88" id="PVj-as-i8y"/>
-                            <constraint firstItem="EMC-2P-Wtd" firstAttribute="top" secondItem="LVp-Hi-v5a" secondAttribute="bottom" constant="206" id="RI1-0U-rCU"/>
-                            <constraint firstItem="YT0-UL-akq" firstAttribute="centerX" secondItem="cWh-i0-KzY" secondAttribute="centerX" id="SkK-XS-f4p"/>
-                            <constraint firstItem="hZ6-hm-2i6" firstAttribute="top" secondItem="Zis-22-0av" secondAttribute="bottom" constant="70" id="TLM-mw-sua"/>
-                            <constraint firstItem="fq9-OU-5rK" firstAttribute="centerX" secondItem="YT0-UL-akq" secondAttribute="centerX" id="URU-sh-pJB"/>
-                            <constraint firstItem="Zis-22-0av" firstAttribute="leading" secondItem="hZ6-hm-2i6" secondAttribute="leading" id="aA3-S0-8vL"/>
-                            <constraint firstItem="VJt-4V-Gdf" firstAttribute="leading" secondItem="LVp-Hi-v5a" secondAttribute="leading" id="cWU-FN-usx"/>
-                            <constraint firstItem="LVp-Hi-v5a" firstAttribute="centerY" secondItem="hZ6-hm-2i6" secondAttribute="centerY" id="cb2-4c-1uv"/>
-                            <constraint firstItem="EMC-2P-Wtd" firstAttribute="top" secondItem="hZ6-hm-2i6" secondAttribute="bottom" constant="210" id="jfk-2O-8qE"/>
-                            <constraint firstItem="LVp-Hi-v5a" firstAttribute="top" secondItem="VJt-4V-Gdf" secondAttribute="bottom" constant="63" id="qMh-Bp-rTM"/>
-                            <constraint firstItem="VJt-4V-Gdf" firstAttribute="centerY" secondItem="Zis-22-0av" secondAttribute="centerY" id="qRj-ZM-oBW"/>
-                            <constraint firstItem="Zis-22-0av" firstAttribute="trailing" secondItem="hZ6-hm-2i6" secondAttribute="trailing" id="wdj-AD-cat"/>
-                            <constraint firstItem="VJt-4V-Gdf" firstAttribute="trailing" secondItem="LVp-Hi-v5a" secondAttribute="trailing" id="xcT-aT-27D"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Laptop" image="computer_icon" id="DIv-cG-F3j"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="heL-Pl-dtv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1" y="828"/>
-        </scene>
-        <!--Tablet-->
+        <!--Cars-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="TabletViewController" customModule="SpecApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="CarsViewController" customModule="SpecApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -186,7 +106,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tablet_img" translatesAutoresizingMaskIntoConstraints="NO" id="vHs-LX-DRW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cars_img" translatesAutoresizingMaskIntoConstraints="NO" id="vHs-LX-DRW">
                                 <rect key="frame" x="67" y="28" width="240" height="128"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zv-mx-ANx">
@@ -248,7 +168,7 @@
                             <constraint firstItem="YAg-qC-iPd" firstAttribute="leading" secondItem="dXe-lG-CVf" secondAttribute="leading" id="zi1-ZT-0uV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tablet" image="tablet_icon" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Cars" image="cars_icon" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -267,7 +187,6 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="tjs-Ce-Q2j" kind="relationship" relationship="viewControllers" id="Pln-mA-KfY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -276,11 +195,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="computer_icon" width="32" height="32"/>
-        <image name="computer_img" width="512" height="512"/>
-        <image name="phone_icon" width="32" height="32"/>
-        <image name="phone_img" width="512" height="512"/>
-        <image name="tablet_icon" width="32" height="32"/>
-        <image name="tablet_img" width="512" height="512"/>
+        <image name="cars_icon" width="30" height="30"/>
+        <image name="cars_img" width="512" height="307"/>
+        <image name="electronics_icon" width="30" height="30"/>
+        <image name="electronics_img" width="104" height="104"/>
     </resources>
 </document>

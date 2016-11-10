@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhoneViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class ElectronicsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var brand: UITextField!
     @IBOutlet weak var model: UITextField!
