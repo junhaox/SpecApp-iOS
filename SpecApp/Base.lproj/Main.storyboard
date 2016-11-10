@@ -22,9 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="electronics_img" translatesAutoresizingMaskIntoConstraints="NO" id="2Xf-S9-n9h">
-                                <rect key="frame" x="67" y="28" width="240" height="128"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXo-Hz-KO1">
                                 <rect key="frame" x="67" y="275" width="80" height="37"/>
                                 <constraints>
@@ -61,8 +58,12 @@
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="AWl-8o-jIc"/>
+                                    <segue destination="J1n-dz-0lr" kind="show" id="pgz-3S-I6o"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="electronics_img" translatesAutoresizingMaskIntoConstraints="NO" id="2Xf-S9-n9h">
+                                <rect key="frame" x="67" y="72" width="240" height="84"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.91005489309232657" green="0.92089470180996802" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -87,7 +88,7 @@
                             <constraint firstItem="rQZ-Ih-owf" firstAttribute="top" secondItem="aXo-Hz-KO1" secondAttribute="bottom" constant="63" id="zl9-4B-A7V"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Electronics" image="electronics_icon" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" title="Electronics" id="yOM-D6-zQx"/>
                     <connections>
                         <outlet property="brand" destination="5Y1-CG-y1W" id="92i-FZ-wcu"/>
                         <outlet property="model" destination="0ie-gK-VfK" id="RCj-ui-us6"/>
@@ -95,7 +96,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="1688.8" y="-320.68965517241384"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yM9-KH-mfp">
+            <objects>
+                <viewController id="J1n-dz-0lr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wEa-WD-AQf"/>
+                        <viewControllerLayoutGuide type="bottom" id="SRM-KG-3Qf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W6K-SW-ejk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="electronics_img" translatesAutoresizingMaskIntoConstraints="NO" id="pWl-r9-sD0">
+                                <rect key="frame" x="67" y="72" width="240" height="84"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91005489309999998" green="0.92089470179999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pWl-r9-sD0" firstAttribute="leading" secondItem="W6K-SW-ejk" secondAttribute="leadingMargin" constant="51" id="5lJ-bp-bQK"/>
+                            <constraint firstItem="pWl-r9-sD0" firstAttribute="top" secondItem="wEa-WD-AQf" secondAttribute="bottom" constant="8" symbolic="YES" id="N1J-WV-zJi"/>
+                            <constraint firstItem="SRM-KG-3Qf" firstAttribute="top" secondItem="pWl-r9-sD0" secondAttribute="bottom" constant="462" id="OVN-FI-eRP"/>
+                            <constraint firstItem="pWl-r9-sD0" firstAttribute="centerX" secondItem="W6K-SW-ejk" secondAttribute="centerX" id="gBO-UH-1dd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n9R-YG-w5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2564" y="-321"/>
         </scene>
         <!--Cars-->
         <scene sceneID="wg7-f3-ORb">
@@ -109,9 +139,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cars_img" translatesAutoresizingMaskIntoConstraints="NO" id="vHs-LX-DRW">
-                                <rect key="frame" x="67" y="28" width="240" height="128"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zv-mx-ANx">
                                 <rect key="frame" x="67" y="275" width="80" height="37"/>
                                 <constraints>
@@ -148,8 +175,12 @@
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="RDI-88-UZb"/>
+                                    <segue destination="FpP-3y-jHa" kind="show" id="UPa-zl-okx"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cars_img" translatesAutoresizingMaskIntoConstraints="NO" id="vHs-LX-DRW">
+                                <rect key="frame" x="67" y="72" width="240" height="84"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.97732521460348798" blue="0.95625626520941032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -174,7 +205,7 @@
                             <constraint firstItem="YAg-qC-iPd" firstAttribute="leading" secondItem="dXe-lG-CVf" secondAttribute="leading" id="zi1-ZT-0uV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cars" image="cars_icon" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" title="Cars" id="7I8-e8-yHE"/>
                     <connections>
                         <outlet property="brand" destination="YAg-qC-iPd" id="LYW-V9-g41"/>
                         <outlet property="model" destination="dXe-lG-CVf" id="bxW-0j-dBs"/>
@@ -182,7 +213,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="1688.8" y="359.37031484257875"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IVz-0l-yCZ">
+            <objects>
+                <viewController id="FpP-3y-jHa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ue6-cU-iBH"/>
+                        <viewControllerLayoutGuide type="bottom" id="UPC-s2-ahv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xti-hx-b6S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cars_img" translatesAutoresizingMaskIntoConstraints="NO" id="SR9-16-DDh">
+                                <rect key="frame" x="67" y="72" width="240" height="84"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.97732521459999999" blue="0.95625626519999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SR9-16-DDh" firstAttribute="leading" secondItem="xti-hx-b6S" secondAttribute="leadingMargin" constant="51" id="KKg-ZP-4dA"/>
+                            <constraint firstItem="UPC-s2-ahv" firstAttribute="top" secondItem="SR9-16-DDh" secondAttribute="bottom" constant="462" id="Qu5-Eb-IeB"/>
+                            <constraint firstItem="SR9-16-DDh" firstAttribute="top" secondItem="ue6-cU-iBH" secondAttribute="bottom" constant="8" symbolic="YES" id="jiI-xJ-sR0"/>
+                            <constraint firstItem="SR9-16-DDh" firstAttribute="centerX" secondItem="xti-hx-b6S" secondAttribute="centerX" id="tmC-LZ-hjl"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I8D-MI-sOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2564" y="359"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -195,13 +255,51 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="Rsq-bd-LSu" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="Q8n-Iv-7Eq" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Electronics-->
+        <scene sceneID="bZF-F3-bv1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rsq-bd-LSu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Electronics" image="electronics_icon" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lqy-eK-dlA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="hxQ-mR-Xay"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ajf-xc-vAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+        </scene>
+        <!--Cars-->
+        <scene sceneID="Rie-ep-6uX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q8n-Iv-7Eq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cars" image="cars_icon" id="cPa-gy-q4n"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DI9-9D-U2t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="MqO-Bc-ebF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OKc-Cf-zup" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
         </scene>
     </scenes>
     <resources>
