@@ -85,6 +85,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Phone" image="phone_icon" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="brand" destination="5Y1-CG-y1W" id="92i-FZ-wcu"/>
+                        <outlet property="model" destination="0ie-gK-VfK" id="RCj-ui-us6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
