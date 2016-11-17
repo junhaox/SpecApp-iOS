@@ -7,16 +7,18 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ElectronicsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var brand: UITextField!
     @IBOutlet weak var model: UITextField!
     
-    var brandData: [String] = ["Apple", "Google", "Samsung"]
+    var brandData: [String] = []
     var modelData: [String] = []
     var brandPicker = UIPickerView()
     var modelPicker = UIPickerView()
+    var ref: FIRDatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,15 @@ class ElectronicsViewController: UIViewController, UIPickerViewDataSource, UIPic
         
         brand.inputView = brandPicker
         model.inputView = modelPicker
+        
+        ref = FIRDatabase.database().reference()
+        
+        ref.child("Electronics").observe(.value, with: {
+            snapshot in
+            for item in snapshot.children {
+                self.brandData.append((item as! FIRDataSnapshot).key)
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
