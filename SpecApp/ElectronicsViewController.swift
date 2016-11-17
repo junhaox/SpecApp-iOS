@@ -35,8 +35,8 @@ class ElectronicsViewController: UIViewController, UIPickerViewDataSource, UIPic
         
         ref.child("Electronics").observe(.value, with: {
             snapshot in
-            for item in snapshot.children {
-                self.brandData.append((item as! FIRDataSnapshot).key)
+            for child in snapshot.children {
+                self.brandData.append((child as! FIRDataSnapshot).key)
             }
         })
     }
@@ -83,28 +83,19 @@ class ElectronicsViewController: UIViewController, UIPickerViewDataSource, UIPic
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if (pickerView == brandPicker) {
             let brandText = brandData[row]
-            modelData = model(brand: brandText)
+            ref.child("Electronics").child(brandText).observe(.value, with: {
+                snapshot in
+                self.modelData = []
+                for child in snapshot.children {
+                    self.modelData.append((child as! FIRDataSnapshot).key)
+                }
+            })
             brand.text = brandData[row]
-            model.text = modelData[0]
+            model.text = ""
             modelPicker.reloadAllComponents()
         }
         else {
             model.text = modelData[row]
-        }
-    }
-    
-    func model(brand: String) -> [String] {
-        if brand == "Apple" {
-            return ["iPhone 7", "iPhone 7 Plus"]
-        }
-        else if brand == "Google" {
-            return ["Pixel", "Pixel XL"]
-        }
-        else if brand == "Samsung" {
-            return ["Galaxy S7 Edge", "Galaxy Note 7"]
-        }
-        else {
-            return []
         }
     }
 
