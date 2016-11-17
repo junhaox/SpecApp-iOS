@@ -74,7 +74,7 @@ class ElectronicsViewController: UIViewController, UIPickerViewDataSource, UIPic
             let brandText = brandData[row]
             modelData = model(brand: brandText)
             brand.text = brandData[row]
-            model.text = ""
+            model.text = modelData[0]
             modelPicker.reloadAllComponents()
         }
         else {
