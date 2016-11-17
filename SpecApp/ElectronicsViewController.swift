@@ -9,12 +9,12 @@
 import UIKit
 
 class ElectronicsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-
+    
     @IBOutlet weak var brand: UITextField!
     @IBOutlet weak var model: UITextField!
     
-    var brandData = ["Apple", "Google", "Samsung"]
-    var modelData = ["iPhone 7", "iPhone 7 Plus", "Pixel", "Pixel XL", "Galaxy S7 Edge", "Galaxy Note 7"]
+    var brandData: [String] = ["Apple", "Google", "Samsung"]
+    var modelData: [String] = []
     var brandPicker = UIPickerView()
     var modelPicker = UIPickerView()
     
@@ -25,6 +25,7 @@ class ElectronicsViewController: UIViewController, UIPickerViewDataSource, UIPic
         brandPicker.dataSource = self
         modelPicker.delegate = self
         modelPicker.dataSource = self
+        
         brand.inputView = brandPicker
         model.inputView = modelPicker
     }
@@ -70,10 +71,28 @@ class ElectronicsViewController: UIViewController, UIPickerViewDataSource, UIPic
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if (pickerView == brandPicker) {
+            let brandText = brandData[row]
+            modelData = model(brand: brandText)
             brand.text = brandData[row]
+            modelPicker.reloadAllComponents()
         }
         else {
             model.text = modelData[row]
+        }
+    }
+    
+    func model(brand: String) -> [String] {
+        if brand == "Apple" {
+            return ["iPhone 7", "iPhone 7 Plus"]
+        }
+        else if brand == "Google" {
+            return ["Pixel", "Pixel XL"]
+        }
+        else if brand == "Samsung" {
+            return ["Galaxy S7 Edge", "Galaxy Note 7"]
+        }
+        else {
+            return []
         }
     }
 
