@@ -98,6 +98,5 @@ class ElectronicsViewController: UIViewController, UIPickerViewDataSource, UIPic
             model.text = modelData[row]
         }
     }
-
 }
 

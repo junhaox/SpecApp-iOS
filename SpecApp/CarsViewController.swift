@@ -7,16 +7,18 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class CarsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var brand: UITextField!
     @IBOutlet weak var model: UITextField!
     
-    var brandData: [String] = ["BMW", "Mercedes-Benz", "Audi"]
+    var brandData: [String] = []
     var modelData: [String] = []
     var brandPicker = UIPickerView()
     var modelPicker = UIPickerView()
+    var ref: FIRDatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,15 @@ class CarsViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         
         brand.inputView = brandPicker
         model.inputView = modelPicker
+        
+        ref = FIRDatabase.database().reference()
+        
+        ref.child("Cars").observe(.value, with: {
+            snapshot in
+            for child in snapshot.children {
+                self.brandData.append((child as! FIRDataSnapshot).key)
+            }
+        })
     }
     
     override func didReceiveMemoryWarning() {
@@ -72,30 +83,20 @@ class CarsViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if (pickerView == brandPicker) {
             let brandText = brandData[row]
-            modelData = model(brand: brandText)
+            ref.child("Cars").child(brandText).observe(.value, with: {
+                snapshot in
+                self.modelData = []
+                for child in snapshot.children {
+                    self.modelData.append((child as! FIRDataSnapshot).key)
+                }
+            })
             brand.text = brandData[row]
-            model.text = modelData[0]
+            model.text = ""
             modelPicker.reloadAllComponents()
         }
         else {
             model.text = modelData[row]
         }
     }
-    
-    func model(brand: String) -> [String] {
-        if brand == "BMW" {
-            return ["i8"]
-        }
-        else if brand == "Mercedes-Benz" {
-            return ["AMG GT-S"]
-        }
-        else if brand == "Audi" {
-            return ["R8"]
-        }
-        else {
-            return []
-        }
-    }
-
 }
 
