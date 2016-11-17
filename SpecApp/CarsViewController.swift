@@ -13,8 +13,8 @@ class CarsViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     @IBOutlet weak var brand: UITextField!
     @IBOutlet weak var model: UITextField!
     
-    var brandData = ["BMW", "Mercedes-Benz", "Audi", "Ferrari", "McLaren", "Porsche", "Lamborghini"]
-    var modelData = ["i8", "AMG GT-S", "R8", "LaFerrari", "P1", "918 Spyder", "Aventador"]
+    var brandData: [String] = ["BMW", "Mercedes-Benz", "Audi"]
+    var modelData: [String] = []
     var brandPicker = UIPickerView()
     var modelPicker = UIPickerView()
     
@@ -25,6 +25,7 @@ class CarsViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         brandPicker.dataSource = self
         modelPicker.delegate = self
         modelPicker.dataSource = self
+        
         brand.inputView = brandPicker
         model.inputView = modelPicker
     }
@@ -70,10 +71,29 @@ class CarsViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if (pickerView == brandPicker) {
+            let brandText = brandData[row]
+            modelData = model(brand: brandText)
             brand.text = brandData[row]
+            model.text = ""
+            modelPicker.reloadAllComponents()
         }
         else {
             model.text = modelData[row]
+        }
+    }
+    
+    func model(brand: String) -> [String] {
+        if brand == "BMW" {
+            return ["i8"]
+        }
+        else if brand == "Mercedes-Benz" {
+            return ["AMG GT-S"]
+        }
+        else if brand == "Audi" {
+            return ["R8"]
+        }
+        else {
+            return []
         }
     }
 
