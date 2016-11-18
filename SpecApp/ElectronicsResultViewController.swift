@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ElectronicsResultViewController: UIViewController {
 
@@ -17,19 +18,44 @@ class ElectronicsResultViewController: UIViewController {
     @IBOutlet weak var display: UILabel!
     @IBOutlet weak var resolution: UILabel!
     
-    var cpuPassed: String!
-    var gpuPassed: String!
+    var brandPassed: String!
+    var modelPassed: String!
+    var ref: FIRDatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print(cpuPassed)
-        cpu.text = cpuPassed
+        
+        ref.child("Electronics").child(brandPassed).child(modelPassed).observe(.value, with: {
+            snapshot in
+            for child in snapshot.children {
+                if (child as! FIRDataSnapshot).key == "CPU" {
+                    self.cpu.text = ((child as! FIRDataSnapshot).value as! String)
+                }
+                else if (child as! FIRDataSnapshot).key == "GPU" {
+                    self.gpu.text = ((child as! FIRDataSnapshot).value as! String)
+                }
+                else if (child as! FIRDataSnapshot).key == "RAM" {
+                    self.ram.text = ((child as! FIRDataSnapshot).value as! String)
+                }
+                else if (child as! FIRDataSnapshot).key == "ROM" {
+                    self.rom.text = ((child as! FIRDataSnapshot).value as! String)
+                }
+                else if (child as! FIRDataSnapshot).key == "Display" {
+                    self.display.text = ((child as! FIRDataSnapshot).value as! String)
+                }
+                else if (child as! FIRDataSnapshot).key == "Resolution" {
+                    self.resolution.text = ((child as! FIRDataSnapshot).value as! String)
+                }
+            }
+        })
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 }
