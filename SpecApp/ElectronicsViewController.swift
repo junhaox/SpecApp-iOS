@@ -45,11 +45,19 @@ class ElectronicsViewController: UIViewController, UIPickerViewDataSource, UIPic
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         brand.resignFirstResponder()
         model.resignFirstResponder()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "electronicsSeg") {
+            let seg = segue.destination as! ElectronicsResultViewController
+            
+            seg.brandPassed = brand.text
+            seg.modelPassed = model.text
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

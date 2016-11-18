@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		423B765ADCA002A9F820FB22 /* Pods_SpecApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ADE5535FF2B14E328066E7E /* Pods_SpecApp.framework */; };
+		A11E80411DDE89FF00A97F2F /* ElectronicsResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E80401DDE89FF00A97F2F /* ElectronicsResultViewController.swift */; };
+		A11E80431DDE8A0F00A97F2F /* CarsResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E80421DDE8A0F00A97F2F /* CarsResultViewController.swift */; };
 		A193A3001DD557870022A5CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A193A2FF1DD557870022A5CA /* GoogleService-Info.plist */; };
 		A1AFAA2A1DD3CAD9009A047F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1AFAA291DD3CAD9009A047F /* Assets.xcassets */; };
 		A1BA62221DD301F5008B09A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BA62211DD301F5008B09A2 /* AppDelegate.swift */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		52857E9ACD747550AD847C60 /* Pods-SpecApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpecApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpecApp/Pods-SpecApp.release.xcconfig"; sourceTree = "<group>"; };
 		8ADE5535FF2B14E328066E7E /* Pods_SpecApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpecApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A11E80401DDE89FF00A97F2F /* ElectronicsResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElectronicsResultViewController.swift; sourceTree = "<group>"; };
+		A11E80421DDE8A0F00A97F2F /* CarsResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarsResultViewController.swift; sourceTree = "<group>"; };
 		A193A2FF1DD557870022A5CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A1AFAA291DD3CAD9009A047F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1BA621E1DD301F5008B09A2 /* SpecApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpecApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,7 +114,9 @@
 			children = (
 				A1BA62211DD301F5008B09A2 /* AppDelegate.swift */,
 				A1BA62231DD301F5008B09A2 /* ElectronicsViewController.swift */,
+				A11E80401DDE89FF00A97F2F /* ElectronicsResultViewController.swift */,
 				A1BA62251DD301F5008B09A2 /* CarsViewController.swift */,
+				A11E80421DDE8A0F00A97F2F /* CarsResultViewController.swift */,
 				A1AFAA291DD3CAD9009A047F /* Assets.xcassets */,
 				A1BA62271DD301F5008B09A2 /* Main.storyboard */,
 				A1BA622C1DD301F5008B09A2 /* LaunchScreen.storyboard */,
@@ -345,7 +351,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1BA62261DD301F5008B09A2 /* CarsViewController.swift in Sources */,
+				A11E80411DDE89FF00A97F2F /* ElectronicsResultViewController.swift in Sources */,
 				A1BA62221DD301F5008B09A2 /* AppDelegate.swift in Sources */,
+				A11E80431DDE8A0F00A97F2F /* CarsResultViewController.swift in Sources */,
 				A1BA62241DD301F5008B09A2 /* ElectronicsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

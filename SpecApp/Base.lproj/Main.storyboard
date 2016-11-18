@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="1688.8" y="-320.68965517241384"/>
         </scene>
-        <!--View Controller-->
+        <!--Electronics Result View Controller-->
         <scene sceneID="yM9-KH-mfp">
             <objects>
-                <viewController id="J1n-dz-0lr" sceneMemberID="viewController">
+                <viewController id="J1n-dz-0lr" customClass="ElectronicsResultViewController" customModule="SpecApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wEa-WD-AQf"/>
                         <viewControllerLayoutGuide type="bottom" id="SRM-KG-3Qf"/>
@@ -246,6 +246,14 @@
                             <constraint firstItem="DuY-mc-KPM" firstAttribute="trailing" secondItem="IlN-Je-s6B" secondAttribute="trailing" id="ylQ-qs-zhW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cpu" destination="sac-Qa-LPq" id="uiW-0F-OQf"/>
+                        <outlet property="display" destination="PYc-yJ-6jF" id="Blh-cJ-RKx"/>
+                        <outlet property="gpu" destination="1iW-Yh-lFc" id="JD3-3f-pZV"/>
+                        <outlet property="ram" destination="eKa-DU-M14" id="Wwe-zg-cap"/>
+                        <outlet property="resolution" destination="NjS-3p-Ahh" id="AfS-kc-qJs"/>
+                        <outlet property="rom" destination="GFN-XX-EFk" id="TWI-5T-btT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n9R-YG-w5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -339,10 +347,10 @@
             </objects>
             <point key="canvasLocation" x="1689" y="358"/>
         </scene>
-        <!--View Controller-->
+        <!--Cars Result View Controller-->
         <scene sceneID="IVz-0l-yCZ">
             <objects>
-                <viewController id="FpP-3y-jHa" sceneMemberID="viewController">
+                <viewController id="FpP-3y-jHa" customClass="CarsResultViewController" customModule="SpecApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ue6-cU-iBH"/>
                         <viewControllerLayoutGuide type="bottom" id="UPC-s2-ahv"/>
