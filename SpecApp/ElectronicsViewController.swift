@@ -54,9 +54,18 @@ class ElectronicsViewController: UIViewController, UIPickerViewDataSource, UIPic
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "electronicsSeg") {
             let seg = segue.destination as! ElectronicsResultViewController
-            
-            seg.brandPassed = brand.text
-            seg.modelPassed = model.text
+            let brandText: String = brand.text! as String
+            let modelText: String = model.text! as String
+            ref.child("Electronics").child(brandText).child(modelText).observe(.value, with: {
+                snapshot in
+                let cpu = "CPU"
+                for child in snapshot.children {
+                    if (child as! FIRDataSnapshot).key == cpu {
+                        let cpuText: String = (child as! FIRDataSnapshot).value as! String
+                        seg.cpuPassed = cpuText
+                    }
+                }
+            })
         }
     }
     

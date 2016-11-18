@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FirebaseDatabase
 
 class ElectronicsResultViewController: UIViewController {
 
@@ -18,22 +17,19 @@ class ElectronicsResultViewController: UIViewController {
     @IBOutlet weak var display: UILabel!
     @IBOutlet weak var resolution: UILabel!
     
-    var brandPassed: String!
-    var modelPassed: String!
+    var cpuPassed: String!
+    var gpuPassed: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print(cpuPassed)
+        cpu.text = cpuPassed
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-    }
-
 }
