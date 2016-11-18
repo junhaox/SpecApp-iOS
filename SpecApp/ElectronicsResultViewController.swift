@@ -24,6 +24,13 @@ class ElectronicsResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cpu.text = ""
+        gpu.text = ""
+        ram.text = ""
+        rom.text = ""
+        display.text = ""
+        resolution.text = ""
 
         // Do any additional setup after loading the view.
         
