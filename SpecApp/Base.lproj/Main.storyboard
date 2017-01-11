@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -307,7 +307,7 @@
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="RDI-88-UZb"/>
-                                    <segue destination="FpP-3y-jHa" kind="show" id="UPa-zl-okx"/>
+                                    <segue destination="FpP-3y-jHa" kind="show" identifier="CarsSeg" id="UPa-zl-okx"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cars_img" translatesAutoresizingMaskIntoConstraints="NO" id="vHs-LX-DRW">
@@ -389,13 +389,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MSRP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN0-2G-z2J">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN0-2G-z2J">
                                 <rect key="frame" x="67" y="456" width="100" height="37"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MPG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4H-PJ-enn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0-60 MPH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4H-PJ-enn">
                                 <rect key="frame" x="67" y="411" width="100" height="37"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -487,6 +487,14 @@
                             <constraint firstItem="dX6-NN-xwv" firstAttribute="leading" secondItem="SR9-16-DDh" secondAttribute="leading" id="zgc-bW-lUU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="engine" destination="mS9-K2-PCp" id="ak3-GA-VqW"/>
+                        <outlet property="horsepower" destination="06A-oP-OFJ" id="TN2-df-fBm"/>
+                        <outlet property="topspeed" destination="amz-2Q-1oP" id="7jr-X0-Pv2"/>
+                        <outlet property="torque" destination="uDK-sT-XGs" id="dtZ-tA-72n"/>
+                        <outlet property="weight" destination="0r9-FG-F8I" id="fh1-0a-MbE"/>
+                        <outlet property="zeroTo60" destination="USl-yR-k3y" id="gQh-YR-9tb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I8D-MI-sOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -46,6 +46,14 @@ class CarsViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CarsSeg" {
+            let seg = segue.destination as! CarsResultViewController
+            seg.brandPassed = brand.text! as String
+            seg.modelPassed = model.text! as String
+            seg.ref = self.ref
+        }
+    }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         brand.resignFirstResponder()

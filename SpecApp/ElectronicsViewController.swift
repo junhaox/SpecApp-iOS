@@ -39,6 +39,7 @@ class ElectronicsViewController: UIViewController, UIPickerViewDataSource, UIPic
                 self.brandData.append((child as! FIRDataSnapshot).key)
             }
         })
+        print(brandData.count)
     }
 
     override func didReceiveMemoryWarning() {
